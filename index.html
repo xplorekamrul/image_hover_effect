@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Color Change</title>
+    <style>
+        .icon {
+            width: 100px;
+            height: 100px;
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+
+        .icon:hover {
+            filter: invert(28%) sepia(98%) saturate(745%) hue-rotate(82deg) brightness(95%) contrast(87%);
+        }
+        .icons {
+            width: 100px;
+            height: 100px;
+            transition: filter 0.3s ease, transform 0.3s ease;
+            margin-left: 50px;
+        }
+
+        .icons:hover {
+            filter: invert(24%) sepia(94%) saturate(800%) hue-rotate(-50deg) brightness(98%) contrast(95%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- when use SVG PNG JPG or any formate and need to change the color  -->
+    <img class="icon" src="images/Web Advertising.svg" alt="">
+
+   <!-- when svg fill & stroke color are not change perfectly then use this code -->
+    <svg class="icons" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <rect width="16" height="16" fill="url(#pattern0_221_2233)" />
+        <rect x="0.5" y="0.5" width="15" height="15" stroke="black" stroke-opacity="0.3" />
+        <defs>
+            <pattern id="pattern0_221_2233" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_221_2233" transform="scale(0.0104167)" />
+            </pattern>
+            <image id="image0_221_2233" width="96" height="96"
+                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFKElEQVR4nO2dS4gdRRSGP0bUiDFqZnxwxajZqTsfiLjRMboI4gOCmJURJBsjJOEmMyYBsxB8gG7EpURQdKMGnAg+giKIEAUfCMZHFDNRxCiMJjExoik5UA1NU9Vd/brVc/t8cDa3T9fpOn93VXV1dV9QFEVRFEVRFEVRFEVRlHDOBtYDu4EfgeOAGVM7CRwE5mydpe7ROBPYCfzRgcSYSCZ1f9TmYqRcBnzZgQSYjtgXwIpRJv/nDlTadMx+GoUIcqnpmU/uldBqc7SzA2ea6bhJjlpBevyFnMD/AENgEhgAM3bUkPWT37Zan0GOn8s/NlK3LbauvuNdaGt0tL5A+c2OfWYcfjOBfibHPzbDglxIrhpnriDohY59Bg6/QaCfyfGPzUUFuZBcNc7BgqCDHgkwKMiF5Kpx/i4I6moqZmv4mQ43QXnHa2yuGqeo9z9pk1XUuYb6GYd/bEKON7HGKQqohgpgOnQi6BWAChD9LDR6BcRPhNEmKH4yzDj3AX3HqABxUQEiowJERgWIjAoQGRUgMipAZFSAyKgAkVEBIqMCREYFiIwKEJlFJcBZwC7gL+Br4LYSC4L3Zh6GH7NlvAzcC5xR4jhk/ebDwEfAkVSZsuLtB+A54KpxFOAxx/r65QH77Q2Yfz8A3BNQ1uWBC4z/BZ4EThsXAeTs/92x/zBg35BlIIlJ0iY85ZwLfFPywcr2lvMSTN1A63LO3ImKsfNEcPF4hbI+bzkvwdQN9HFOGasrxs6zuzNliMi/VChnT8t5CaZOoOtbqORSYNru69r+HXB6qowVDp8TwLWZ5edDO0iQ7fPA1S3mpRR1Ar1QIMB/wBUlY6fZ4fFZk/K50rF93tP8nQ9cAyxpOS+lqBpo0p5pVdttAuO6roSXUtuX2ZGNayn5rF3zKS+CrAWmCKfzAmwJbGt/yznjQuJOO3zkPiHNe4HHIqOuZ8bhCpDL+3vHPs97ror7S8TOco7DR26y0twMnAoUQeyDgJfuOi3Aak97v9LTL+wrEbuKAMIjJQQQe7qFvFSiSqA3Hf7yW97I6LrA2FWaoIT77Hu9oc3R1GIUYKU927P+r9oOb8bzmYNdgbFDOuEXc45P5o5uBzbaG7Qn7ByQ602gtQ3mpTJlAz1V8lI31o7bkVNR7DTbA4ahyct1yWjH9VIhVoRsObMN5qUyZQL55n1CbRgQW97FvSXn7c1vMzdiU5lPLBy2k3fpWdRJzx37hobyUosygXzzPqF2IHODVHZ/GencmTmmh2oczw0N5aUWZQJ9WFMAA6wKiO0zadOzPFjj+w8Ti02Aow6/Z21H57LPHP6bKkxHn7LluRImTdb+ksmXuDc2mJdalAmUfYDyfkHZqxyJvCm1/d2AZEmbf1dBnAsC3vhP7E/gjobzUosygWTm8W1bibeASwPK3wT8ajtKaa+zjyTfyVwJcpV9ZYeaazIdbhG3Aq/YhzPpD2+csGXKCO7iwLI6KUCfMCpAXFSAyKgAkVEBIqMCREYFiIwKEBkVoC8CuOZ3kvU5fWVZzjRG4/jWVMqD7r4y7cmJ71FoLXZ7gr1Bf9njyclrbQR7IKe920b/2JGTD9/ymlosL/ivgDn7iHCc+4SlBetRk08Xn9fWAWwLnEvvs22lRWSp3icdqKTpqO0LXM5Yi0uAQx2orOmYzY/y47IDq3bsSpuO2Kej/AuThCV2wVKf/8Rnwbb5I/8Tn+zLDOvsfcL+nDvmcbCjto6v26Fma6MdRVEURVEURVEURVEUhbHjf2oGUmSvTgHiAAAAAElFTkSuQmCC" />
+        </defs>
+    </svg>
+
+</body>
+
+</html>
